@@ -6,7 +6,7 @@ const Accueil = () => {
     return(
         <div className="divAccueil">
         <Navigation/>
-        <h1>Site gratuit de partage de fichiers PDF</h1>
+        <h1>Site gratuit de partage de fichiers audios</h1>
         <h2>Inscription</h2>
         <p>
             Pour vous inscrire il faut cliquer sur "Inscription" 
@@ -28,13 +28,13 @@ const Accueil = () => {
             "Mot de passe" avec votre mot de passe. Une fois que vous avez rempli 
             tous les champs vous devez cliquer sur le bouton "Se connecter".
         </p>
-        <h2>Mettre en ligne son Fichier PDF</h2>
+        <h2>Mettre en ligne son Fichier audio</h2>
         <p>
-            Pour mettre en ligne son fichier pdf il faut cliquer sur "Mettre en ligne son fichier PDF" 
+            Pour mettre en ligne son fichier audio il faut cliquer sur "Mettre en ligne son fichier audio" 
             dans la barre de navigation en haut de la page. Ensuite vous 
-            aurez acces a un formulaire de mise en ligne de votre fichier pdf. 
+            aurez acces a un formulaire de mise en ligne de votre fichier audio. 
             Premierement il faut remplir le champ "nom" avec le nom de votre 
-            fichier pdf, deuxiemement il faut choisir un fichier pdf et troisiemement 
+            fichier audio, deuxiemement il faut choisir un fichier audio et troisiemement 
             il faut remplir le champ "description" avec une courte description de votre fichier.
         </p>
         <h2>Modifier son Profil</h2>
@@ -50,19 +50,19 @@ const Accueil = () => {
             dans la barre de navigation en haut de la page. Pour 
             vous desinscrire appuyer sur le bouton "Se desinscrire" en bas de la page.
         </p>
-        <h2>Rechercher un fichier PDF</h2>
+        <h2>Rechercher un fichier audio</h2>
         <p>
-            Pour rechercher un fichier PDF il faut cliquer sur "Rechercher" 
+            Pour rechercher un fichier audio il faut cliquer sur "Rechercher" 
             dans la barre de navigation en haut de la page. Remplissez 
             le champ de recherche avec votre requete puis cliquez sur "Rechercher".
         </p>
-        <h2>Acceder a un Fichier PDF</h2>
+        <h2>Acceder a un Fichier audio</h2>
         <p>
-            Pour acceder a un Fichier PDF il faut cliquer sur un fichier PDF sous la barre de recherche.
+            Pour acceder a un Fichier audio il faut cliquer sur un fichier audio sous la barre de recherche.
         </p>
-        <h2>Telecharger un fichier PDF</h2>
+        <h2>Telecharger un fichier audio</h2>
         <p>
-            Pour pouvoir telecharger un fichier PDF il faut acceder a la page du fichier PDF en question et 
+            Pour pouvoir telecharger un fichier audio il faut acceder a la page du fichier audio en question et 
             ensuite cliquer sur le bouton "Telecharger".
         </p>
         </div>

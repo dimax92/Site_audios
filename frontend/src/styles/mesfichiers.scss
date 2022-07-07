@@ -1,9 +1,9 @@
-.divMesTutos {
-    .tutosMap {
+.divMesFichiers {
+    .fichiersMap {
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        .tuto {
+        .fichier {
             width: 90%;
             max-width: 200px;
             background: white;

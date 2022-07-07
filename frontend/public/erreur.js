@@ -1,5 +1,5 @@
 function mauvaisNomDeDomaine(){
-    if(location.host !== "pdfou.com" && location.host !== "www.pdfou.com"){
+    if(location.host !== "musicoll.com" && location.host !== "www.musicoll.com"){
         document.querySelector("html").remove();
     }
 };

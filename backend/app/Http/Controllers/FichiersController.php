@@ -15,7 +15,7 @@ class FichiersController extends Controller
     public function store(Request $request, $id)
     {
         $validator = Validator::make($request->all(),[
-            'donneesFichier' => 'required|mimes:audio/mp3, audio/mp4',
+            'donneesFichier' => 'required|audio',
             "nom" => "required|string",
             "description" => "required|string"
             ]
@@ -25,7 +25,7 @@ class FichiersController extends Controller
             return response()->json($validator->errors(), 401);       
         }
 
-        $fileName = hash("sha256", uniqid()).".".$request->file("donneesFichier")->extension();
+        $fileName = hash("sha256", uniqid()).".".$request->file("donneesFichier")->getClientOriginalExtension();
         Storage::disk("local")->putFileAs("fichiers", $request->file("donneesFichier"), $fileName);
         $fichiers = Fichiers::create([
             "user_id" => $id,
@@ -34,7 +34,7 @@ class FichiersController extends Controller
             "nomfichier" => $fileName,
             "description" => $request->input("description")
         ]);
-        return $fichiers;
+        return $request->file("donneesFichier")->getClientOriginalExtension();
     }
 
     public function index()
@@ -78,7 +78,7 @@ class FichiersController extends Controller
         if($userIdRequete === $userIdUpdate){
             if($request->hasFile('donneesFichier')){
                 $validatorFile = Validator::make($request->all(),[
-                    'donneesFichier' => 'required|mimes:audio/mp3, audio/mp4'
+                    'donneesFichier' => 'required|audio'
                     ]
                 );
         
@@ -86,7 +86,7 @@ class FichiersController extends Controller
                     return response()->json([$validatorFile->errors(), $validator->errors()], 401);       
                 }
                 $nomFichier = $fichiers->nomfichier;
-                $fileName = hash("sha256", uniqid()).".".$request->file("donneesFichier")->extension();
+                $fileName = hash("sha256", uniqid()).".".$request->file("donneesFichier")->getClientOriginalExtension();
                 Storage::delete("fichiers/".$nomFichier);
                 Storage::disk("local")->putFileAs("fichiers", $request->file("donneesFichier"), $fileName);
                 $fichiers->update([

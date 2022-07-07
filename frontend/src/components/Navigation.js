@@ -48,10 +48,10 @@ const Navigation=()=>{
             setNavigation(
                 <div className="nav">
                     <NavLink className="navigation" activeClassName="nav-active" exact to="/Formulaire">
-                        Mettre en ligne un fichier PDF
+                        Mettre en ligne un fichier audio
                     </NavLink>
                     <NavLink className="navigation" activeClassName="nav-active" exact to="/MesFichiers">
-                        Mes fichiers PDF
+                        Mes fichiers audios
                     </NavLink>
                     <NavLink className="navigation" activeClassName="nav-active" exact to="/Profil">
                         Profil

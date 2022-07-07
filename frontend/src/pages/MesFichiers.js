@@ -63,13 +63,13 @@ const MesFichiers = () => {
     }
     
     return (
-        <div className="divMesTutos">
+        <div className="divMesFichiers">
             <Navigation/>
             {reponse}
-            <div className="tutosMap">
+            <div className="fichiersMap">
             {data.map((resultat)=>{
                 return(
-                    <div className="tuto">
+                    <div className="fichier">
                         <p>{resultat.nom}</p>
                         <div className="supprimerModifier">
                         <a href={"Modification/"+resultat.id}>
